@@ -6,7 +6,7 @@ import { ChevronRight } from 'lucide-react'
 export default function PageHero({ eyebrow, title, subtitle, breadcrumb, variant = 'navy', children }) {
   const variants = {
     navy: 'bg-hero-gradient',
-    medical: 'bg-gradient-to-br from-navy-900 via-navy-800 to-medical-800',
+    medical: 'bg-hero-gradient',
   }
   return (
     <section className={`relative overflow-hidden ${variants[variant]}`}>

@@ -13,6 +13,7 @@ import BankingPartners from '../components/BankingPartners'
 import EMICalculator from '../components/EMICalculator'
 import AnimatedCounter from '../components/AnimatedCounter'
 import { HeroIllustration } from '../components/Illustrations'
+import HeroSlider from '../components/HeroSlider'
 import { site, stats, whyChoose, trustHighlights } from '../data/site'
 import { generalServices } from '../data/generalServices'
 
@@ -51,7 +52,7 @@ function Hero() {
       <div className="pointer-events-none absolute -right-24 top-0 h-96 w-96 rounded-full bg-brand-600/20 blur-3xl" />
       <div className="pointer-events-none absolute -left-24 bottom-0 h-96 w-96 rounded-full bg-medical-500/20 blur-3xl" />
 
-      <div className="container-custom relative grid gap-10 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
+      <div className="container-custom relative grid gap-10 pb-16 pt-8 lg:grid-cols-2 lg:items-center lg:pb-20 lg:pt-10">
         <motion.div initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white ring-1 ring-white/20">
             <Star className="h-3.5 w-3.5 fill-brand-400 text-brand-400" />
@@ -86,14 +87,14 @@ function Hero() {
           </div>
         </motion.div>
 
-        {/* Premium illustration */}
+        {/* Image slider (gallery photos) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="relative mx-auto w-full max-w-lg"
+          className="relative mx-auto w-full max-w-md"
         >
-          <HeroIllustration className="w-full drop-shadow-2xl" />
+          <HeroSlider />
         </motion.div>
       </div>
     </section>
@@ -103,7 +104,7 @@ function Hero() {
 /* ---------------------------------------------------- Statistics (counters) */
 function Statistics() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 py-16">
+    <section className="relative overflow-hidden bg-hero-gradient py-16">
       <div className="pointer-events-none absolute -left-16 top-0 h-64 w-64 rounded-full bg-brand-600/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-medical-500/10 blur-3xl" />
       <div className="container-custom relative">

@@ -60,7 +60,8 @@ export default {
         nav: '0 2px 16px -4px rgba(11, 26, 51, 0.12)',
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, #0b1a33 0%, #152d4f 55%, #1f3a66 100%)',
+        // Primary brand blue (#004C8F) — flat, solid fill.
+        'hero-gradient': 'linear-gradient(#004C8F, #004C8F)',
         'brand-gradient': 'linear-gradient(135deg, #c62d3d 0%, #a52230 100%)',
       },
       keyframes: {

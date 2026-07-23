@@ -118,7 +118,7 @@ export default function HealthcareFinance() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-medical-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <span className="relative flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-medical-100 to-medical-50 text-medical-700 shadow-sm transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
-                  <Icon name={p.icon} className="h-8 w-8" />
+                  <img src={p.imgSrc} alt={p.name} className="h-10 w-10 object-contain" />
                 </span>
                 <div className="relative mt-6">
                   <h3 className="text-xl font-bold text-navy-900 group-hover:text-medical-700 transition-colors">{p.name}</h3>
@@ -159,7 +159,7 @@ export default function HealthcareFinance() {
               >
                 <div className="flex items-center gap-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-medical-500/20 text-medical-300 group-hover:bg-medical-500 group-hover:text-white transition-colors">
-                     <Icon name={s.icon} className="h-5 w-5" />
+                     <img src={s.imgSrc} alt={s.name} className="h-6 w-6 object-contain" />
                   </div>
                   <span className="text-sm font-medium tracking-wide">{s.name}</span>
                 </div>
@@ -202,7 +202,7 @@ export default function HealthcareFinance() {
                 <div className="relative p-8 sm:p-10 border-b border-navy-50">
                   <div className="flex items-start gap-6">
                     <span className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-medical-600 to-medical-800 text-white shadow-lg shadow-medical-600/30 transition-transform duration-500 group-hover:scale-110">
-                      <Icon name={s.icon} className="h-8 w-8" />
+                      <img src={s.imgSrc} alt={s.name} className="h-10 w-10 object-contain" />
                     </span>
                     <div>
                       <h3 className="text-2xl font-bold text-navy-900 mb-2">{s.name}</h3>

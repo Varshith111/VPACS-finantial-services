@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   Target, Eye, Heart, ShieldCheck, Handshake, Award, Users, Quote,
@@ -6,6 +7,7 @@ import {
 import PageHero from '../components/PageHero'
 import CTASection from '../components/CTASection'
 import SectionHeading from '../components/SectionHeading'
+import Gallery from '../components/Gallery'
 import { FounderAvatar } from '../components/Illustrations'
 import { stats, whyChoose } from '../data/site'
 
@@ -196,7 +198,7 @@ export default function About() {
           >
             {/* Portrait */}
             <div className="lg:col-span-2">
-              <FounderAvatar className="mx-auto w-full max-w-xs" />
+              <FounderPhoto />
             </div>
 
             {/* Message */}
@@ -208,8 +210,8 @@ export default function About() {
                 solution without the runaround. That promise still guides every decision we make today.
               </blockquote>
               <div className="mt-6 border-t border-navy-100 pt-5">
-                <p className="text-lg font-bold text-navy-900">Founder &amp; Managing Director</p>
-                <p className="text-sm text-brand-600">VPACS Financial Services</p>
+                <p className="text-xl font-bold text-navy-900">Venkata Narayana Pamula</p>
+                <p className="text-sm font-semibold text-brand-600">Founder &amp; Managing Director, VPACS Financial Services</p>
                 <div className="mt-4 flex flex-wrap gap-x-8 gap-y-3">
                   <div>
                     <p className="font-display text-2xl font-extrabold text-navy-900">15+ yrs</p>
@@ -225,15 +227,32 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <p className="mt-5 text-xs text-navy-400">
-                Founder details and photograph to be provided by VPACS.
-              </p>
             </div>
           </motion.div>
         </div>
       </section>
 
+      <Gallery />
+
       <CTASection />
     </>
+  )
+}
+
+// Founder portrait — uses the uploaded photo, falling back to the illustration
+// if the image file is not present.
+function FounderPhoto() {
+  const [failed, setFailed] = useState(false)
+  if (failed) return <FounderAvatar className="mx-auto w-full max-w-xs" />
+  return (
+    <div className="mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-3xl bg-navy-100 shadow-card ring-1 ring-navy-100">
+      <img
+        src={encodeURI('/images/WhatsApp Image 2026-07-23 at 4.43.34 PM.jpeg')}
+        alt="Venkata Narayana Pamula — Founder & Managing Director, VPACS Financial Services"
+        loading="lazy"
+        onError={() => setFailed(true)}
+        className="h-full w-full object-cover object-top"
+      />
+    </div>
   )
 }

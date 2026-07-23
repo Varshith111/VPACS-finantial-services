@@ -119,7 +119,7 @@ function Hero() {
 /* ──────────────────────────────────────────────────────── Stats bar */
 function StatsBar() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 py-10">
+    <section className="relative overflow-hidden bg-hero-gradient py-10">
       <div className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
       <div className="container-custom">
