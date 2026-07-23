@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "PowerShell(Stop-Process -Id 23868 -Force -ErrorAction SilentlyContinue)",
+      "PowerShell(\"done\")"
+    ]
+  }
+}
