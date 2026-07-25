@@ -49,7 +49,7 @@ export default function About() {
               at the right price — without the runaround.
             </p>
             <p className="mt-4 text-navy-600">
-              Our dedicated Healthcare Finance division serves doctors, medical students and
+              Our dedicated Medical Education Finance division serves doctors, medical students and
               healthcare institutions with specialised financing, because we believe every
               profession deserves finance that understands it.
             </p>

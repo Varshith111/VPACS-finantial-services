@@ -31,8 +31,8 @@ export default function HealthcareFinance() {
     <div className="relative bg-navy-50/30">
       <PageHero
         variant="medical"
-        eyebrow="Healthcare Finance"
-        breadcrumb="Healthcare Finance"
+        eyebrow="Medical Education Finance"
+        breadcrumb="Medical Education Finance"
         title="Elevate Your Medical Practice"
         subtitle="Specialised funding designed exclusively for healthcare professionals, institutions, and aspiring medical students."
       >
@@ -267,7 +267,7 @@ export default function HealthcareFinance() {
 
       <CTASection
         title="Let's Finance Your Future"
-        subtitle="From your very first year of medical school to expanding your multi-speciality hospital — VPACS has a bespoke solution. Speak with our specialized healthcare finance experts today."
+        subtitle="From your very first year of medical school to expanding your multi-speciality hospital — VPACS has a bespoke solution. Speak with our specialized medical education finance experts today."
       />
     </div>
   )

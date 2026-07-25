@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Corporate website for VPACS Financial Services - General & Healthcare Finance",
+  "description": "Corporate website for VPACS Financial Services - General & Medical Education Finance",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

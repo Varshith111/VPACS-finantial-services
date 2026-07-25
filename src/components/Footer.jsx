@@ -30,7 +30,7 @@ const legalLinks = [
 const quickLinks = [
   { label: 'Home', to: '/' },
   { label: 'General Finance', to: '/general-finance' },
-  { label: 'Healthcare Finance', to: '/healthcare-finance' },
+  { label: 'Medical Education Finance', to: '/healthcare-finance' },
   { label: 'About Us', to: '/about' },
   { label: 'Contact Us', to: '/contact' },
 ]
@@ -72,7 +72,7 @@ export default function Footer() {
               <OriginalLogo />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-navy-300">
-              {site.description} From home and business loans to healthcare financing, VPACS is
+              {site.description} From home and business loans to medical education financing, VPACS is
               your trusted partner for every financial milestone.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -132,7 +132,7 @@ export default function Footer() {
 
           {/* Healthcare */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wider text-white">Healthcare Finance</h4>
+            <h4 className="text-sm font-bold uppercase tracking-wider text-white">Medical Education Finance</h4>
             <ul className="mt-4 space-y-2.5">
               {healthcareLinks.map((l) => (
                 <li key={l.label}>

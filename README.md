@@ -2,14 +2,14 @@
 
 A modern, responsive, premium corporate website for **VPACS Financial Services**, built with
 React, Tailwind CSS and Firebase Google Authentication. It covers two service divisions —
-**General Finance** and **Healthcare Finance** — plus About, Contact and Google Sign-In.
+**General Finance** and **Medical Education Finance** — plus About, Contact and Google Sign-In.
 
 ---
 
 ## ✨ Features
 
-- **6 pages** — Home, General Finance, Healthcare Finance, About Us, Contact Us, Sign In (+ 404)
-- **Two finance divisions** with full service catalogues (loans, investments, tax, healthcare finance)
+- **6 pages** — Home, General Finance, Medical Education Finance, About Us, Contact Us, Sign In (+ 404)
+- **Two finance divisions** with full service catalogues (loans, investments, tax, medical education finance)
 - **Google Authentication** via Firebase (graceful fallback when not configured)
 - **Contact form** with validation, service pre-fill, Formspree/endpoint support and a mailto fallback
 - **WhatsApp**, **Google Maps** embed, phone/email and social links

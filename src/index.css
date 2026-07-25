@@ -76,3 +76,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #4f6f9f;
 }
+
+/* Splash screen shimmer bar */
+@keyframes splash-shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+.splash-shimmer {
+  animation: splash-shimmer 1.2s ease-in-out infinite;
+}

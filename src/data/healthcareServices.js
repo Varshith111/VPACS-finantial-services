@@ -1,4 +1,4 @@
-// Healthcare Finance catalogue: professionals, students and financing solutions.
+// Medical Education Finance catalogue: professionals, students and financing solutions.
 
 export const healthcareProfessionals = [
   { id: 'doctors', name: 'Doctors', imgSrc: '/images/icon_stethoscope.png', desc: 'Personal & professional finance for practising doctors.' },

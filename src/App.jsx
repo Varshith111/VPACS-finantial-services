@@ -1,9 +1,10 @@
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy, useState, useCallback } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FloatingActions, { StickyHelp } from './components/FloatingActions'
 import ScrollToTop from './components/ScrollToTop'
+import SplashScreen from './components/SplashScreen'
 import Home from './pages/Home'
 
 // Route-level code splitting keeps the initial bundle lean.
@@ -24,29 +25,38 @@ function PageLoader() {
 }
 
 export default function App() {
+  const [splashDone, setSplashDone] = useState(false)
+  const handleSplashFinish = useCallback(() => setSplashDone(true), [])
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <ScrollToTop />
-      <Navbar />
-      <main className="flex-1">
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/general-finance" element={<GeneralFinance />} />
-            <Route path="/healthcare-finance" element={<HealthcareFinance />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/privacy-policy" element={<Legal doc="privacy" />} />
-            <Route path="/terms" element={<Legal doc="terms" />} />
-            <Route path="/disclaimer" element={<Legal doc="disclaimer" />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </main>
-      <Footer />
-      <FloatingActions />
-      <StickyHelp />
-    </div>
+    <>
+      {!splashDone && <SplashScreen onFinish={handleSplashFinish} />}
+      <div
+        className="flex min-h-screen flex-col"
+        style={!splashDone ? { overflow: 'hidden', height: '100vh', opacity: 0 } : undefined}
+      >
+        <ScrollToTop />
+        <Navbar />
+        <main className="flex-1">
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/general-finance" element={<GeneralFinance />} />
+              <Route path="/healthcare-finance" element={<HealthcareFinance />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/privacy-policy" element={<Legal doc="privacy" />} />
+              <Route path="/terms" element={<Legal doc="terms" />} />
+              <Route path="/disclaimer" element={<Legal doc="disclaimer" />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+        <FloatingActions />
+        <StickyHelp />
+      </div>
+    </>
   )
 }

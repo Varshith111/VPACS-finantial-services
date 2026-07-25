@@ -7,7 +7,7 @@ export const site = {
   shortName: 'VPACS',
   tagline: 'Finance that moves you forward.',
   description:
-    'Premium general and healthcare financing solutions built on trust, transparency and speed.',
+    'Premium general and medical education financing solutions built on trust, transparency and speed.',
   phone: import.meta.env.VITE_CONTACT_PHONE || '+91 95538 31325',
   email: import.meta.env.VITE_CONTACT_EMAIL || 'info@vpacspvtltd.com',
   whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '+919553831325',
@@ -62,7 +62,7 @@ export const trustHighlights = [
 export const faqs = [
   {
     q: 'What types of loans does VPACS help with?',
-    a: 'We assist with home, personal, business, MSME, education, car, machinery and project loans, plus loan against property and securities. We also have a dedicated healthcare finance division for doctors, students and institutions.',
+    a: 'We assist with home, personal, business, MSME, education, car, machinery and project loans, plus loan against property and securities. We also have a dedicated medical education finance division for doctors, students and institutions.',
   },
   {
     q: 'Does VPACS charge for consultation?',

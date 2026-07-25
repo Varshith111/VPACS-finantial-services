@@ -62,7 +62,7 @@ function Hero() {
             Finance that moves <span className="text-brand-400">you forward.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-100">
-            From home and business loans to specialised healthcare financing, VPACS delivers premium
+            From home and business loans to specialised medical education financing, VPACS delivers premium
             financial solutions built on trust, transparency and speed — all under one roof.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -269,14 +269,14 @@ function Divisions() {
           </div>
         </motion.div>
 
-        {/* Healthcare Finance */}
+        {/* Medical Education Finance */}
         <HealthcareFinanceCard />
       </div>
     </section>
   )
 }
 
-/* ------------------------------------------------- Healthcare Finance Card */
+/* ------------------------------------------------- Medical Education Finance Card */
 const hcServices = [
   { icon: GraduationCap, label: 'Medical Education Loans', desc: 'MBBS, MD, BDS & abroad — full course coverage with moratorium.' },
   { icon: Stethoscope,   label: 'Doctor Loans',            desc: 'Collateral-free loans for practising doctors at preferential rates.' },
@@ -312,7 +312,7 @@ function HealthcareFinanceCard() {
             </span>
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-medical-300">Dedicated Division</p>
-              <h3 className="text-2xl font-bold text-white">Healthcare Finance</h3>
+              <h3 className="text-2xl font-bold text-white">Medical Education Finance</h3>
             </div>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-navy-200">
@@ -360,7 +360,7 @@ function HealthcareFinanceCard() {
             Serving <span className="font-semibold text-navy-800">MBBS · BDS · MD · Nursing · Pharmacy</span> and all allied health sciences.
           </p>
           <Link to="/healthcare-finance" className="btn shrink-0 bg-medical-500 text-white transition-transform hover:scale-105 hover:bg-medical-600">
-            Explore Healthcare Finance <ArrowRight className="h-4 w-4" />
+            Explore Medical Education Finance <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>
@@ -376,7 +376,7 @@ function Testimonials() {
       name: 'Rahul Mehta', location: 'Hyderabad', type: 'Home Loan', color: 'bg-brand-600',
     },
     {
-      quote: 'As a doctor setting up my own clinic, their healthcare finance team understood exactly what I needed. Quick and transparent.',
+      quote: 'As a doctor setting up my own clinic, their medical education finance team understood exactly what I needed. Quick and transparent.',
       name: 'Dr. Ananya Reddy', location: 'Bengaluru', type: 'Clinic Setup Loan', color: 'bg-medical-600',
     },
     {

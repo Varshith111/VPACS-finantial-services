@@ -2,31 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/jpeg" href="/images/WhatsApp%20Image%202026-07-25%20at%2011.56.35%20AM.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b1a33" />
 
     <!-- Primary SEO -->
-    <title>VPACS Financial Services | General & Healthcare Finance</title>
+    <title>VPACS Financial Services | General & Medical Education Finance</title>
     <meta
       name="description"
-      content="VPACS Financial Services offers premium banking, loan, investment and healthcare financing solutions. Home loans, business loans, doctor loans, medical education loans and more. Trusted, transparent, professional."
+      content="VPACS Financial Services offers premium banking, loan, investment and medical education financing solutions. Home loans, business loans, doctor loans, medical education loans and more. Trusted, transparent, professional."
     />
-    <meta name="keywords" content="VPACS, financial services, home loans, business loans, healthcare finance, doctor loans, medical education loans, mutual funds, insurance, income tax filing" />
+    <meta name="keywords" content="VPACS, financial services, home loans, business loans, medical education finance, doctor loans, medical education loans, mutual funds, insurance, income tax filing" />
     <meta name="author" content="VPACS Financial Services" />
     <link rel="canonical" href="https://www.vpacs.in/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="VPACS Financial Services | General & Healthcare Finance" />
-    <meta property="og:description" content="Premium banking, loan, investment and healthcare financing solutions built on trust and transparency." />
+    <meta property="og:title" content="VPACS Financial Services | General & Medical Education Finance" />
+    <meta property="og:description" content="Premium banking, loan, investment and medical education financing solutions built on trust and transparency." />
     <meta property="og:site_name" content="VPACS Financial Services" />
     <meta property="og:url" content="https://www.vpacs.in/" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="VPACS Financial Services" />
-    <meta name="twitter:description" content="Premium general & healthcare financing solutions built on trust." />
+    <meta name="twitter:description" content="Premium general & medical education financing solutions built on trust." />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,13 +42,18 @@
         "@context": "https://schema.org",
         "@type": "FinancialService",
         "name": "VPACS Financial Services",
-        "description": "General and healthcare financing solutions including loans, investments, insurance and tax services.",
+        "description": "General and medical education financing solutions including loans, investments, insurance and tax services.",
         "url": "https://www.vpacs.in/",
         "areaServed": "IN"
       }
     </script>
   </head>
   <body>
+    <!-- Instant splash while JS loads — React will hide it -->
+    <div id="pre-splash" style="position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#fff;transition:opacity .6s ease">
+      <img src="/images/vpacs-logo-transparent.png" alt="VPACS" style="height:11rem;width:auto;object-fit:contain;animation:splashPulse 1.6s ease-in-out infinite" />
+    </div>
+    <style>@keyframes splashPulse{0%,100%{opacity:.85;transform:scale(.97)}50%{opacity:1;transform:scale(1.03)}}</style>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
