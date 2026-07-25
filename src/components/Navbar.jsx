@@ -23,9 +23,6 @@ export default function Navbar() {
   const { user, signOut } = useAuth()
   const location = useLocation()
   const megaTimeout = useRef(null)
-  const isHome = location.pathname === '/'
-  // Transparent navbar only on the landing page when user hasn't scrolled
-  const transparent = isHome && !scrolled && !mobileOpen
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -48,15 +45,11 @@ export default function Navbar() {
   }
 
   return (
-    <header className={`${isHome ? 'fixed' : 'sticky'} top-0 z-50 w-full`}>
+    <header className="sticky top-0 z-50 w-full">
       {/* ---------- Main navigation ---------- */}
       <div
         className={`w-full border-b transition-all duration-300 ${
-          transparent
-            ? 'border-transparent bg-transparent'
-            : scrolled
-              ? 'border-navy-100 bg-white/95 shadow-nav backdrop-blur'
-              : 'border-transparent bg-white'
+          scrolled ? 'border-navy-100 bg-white/95 shadow-nav backdrop-blur' : 'border-transparent bg-white'
         }`}
       >
         <nav
@@ -64,7 +57,7 @@ export default function Navbar() {
             scrolled ? 'h-16' : 'h-18'
           }`}
         >
-          <Logo light={transparent} />
+          <Logo />
 
           {/* Desktop nav */}
           <ul className="hidden items-center gap-0.5 lg:flex">
@@ -78,13 +71,13 @@ export default function Navbar() {
                 <NavLink to={item.to} className="group relative flex items-center gap-1 px-4 py-2 text-sm font-semibold">
                   {({ isActive }) => (
                     <>
-                      <span className={isActive ? (transparent ? 'text-white' : 'text-brand-600') : `${transparent ? 'text-white/90' : 'text-navy-800'} transition-colors group-hover:text-brand-600`}>
+                      <span className={isActive ? 'text-brand-600' : 'text-navy-800 transition-colors group-hover:text-brand-600'}>
                         {item.label}
                       </span>
                       {item.mega && (
                         <ChevronDown
                           className={`h-3.5 w-3.5 transition-all ${
-                            isActive ? (transparent ? 'text-white' : 'text-brand-600') : `${transparent ? 'text-white/70' : 'text-navy-500'} group-hover:text-brand-600`
+                            isActive ? 'text-brand-600' : 'text-navy-500 group-hover:text-brand-600'
                           } ${openMega === item.mega ? 'rotate-180' : ''}`}
                         />
                       )}
@@ -134,7 +127,7 @@ export default function Navbar() {
                 {/* Quick call */}
                 <a
                   href={`tel:${site.phone.replace(/\s+/g, '')}`}
-                  className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors ${transparent ? 'text-white ring-1 ring-white/30 hover:bg-white/10' : 'text-[#004C8F] ring-1 ring-navy-200 hover:bg-navy-50'}`}
+                  className="flex h-10 w-10 items-center justify-center rounded-full text-[#004C8F] ring-1 ring-navy-200 transition-colors hover:bg-navy-50"
                   aria-label="Call us"
                   title={site.phone}
                 >
@@ -149,7 +142,7 @@ export default function Navbar() {
 
           {/* Mobile toggle */}
           <button
-            className={`rounded-lg p-2 lg:hidden ${transparent ? 'text-white' : 'text-navy-800'}`}
+            className="rounded-lg p-2 text-navy-800 lg:hidden"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}

@@ -52,7 +52,7 @@ function Hero() {
       <div className="pointer-events-none absolute -right-24 top-0 h-96 w-96 rounded-full bg-brand-600/20 blur-3xl" />
       <div className="pointer-events-none absolute -left-24 bottom-0 h-96 w-96 rounded-full bg-medical-500/20 blur-3xl" />
 
-      <div className="container-custom relative grid gap-10 pb-16 pt-24 lg:grid-cols-2 lg:items-center lg:pb-20 lg:pt-28">
+      <div className="container-custom relative grid gap-10 pb-16 pt-8 lg:grid-cols-2 lg:items-center lg:pb-20 lg:pt-10">
         <motion.div initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white ring-1 ring-white/20">
             <Star className="h-3.5 w-3.5 fill-brand-400 text-brand-400" />
