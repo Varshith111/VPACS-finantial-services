@@ -48,7 +48,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full">
+    <header className={`${isHome ? 'fixed' : 'sticky'} top-0 z-50 w-full`}>
       {/* ---------- Main navigation ---------- */}
       <div
         className={`w-full border-b transition-all duration-300 ${
