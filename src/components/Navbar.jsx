@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { Menu, X, ChevronDown, LogOut, Phone, ArrowRight, MessageCircle } from 'lucide-react'
+import { Menu, X, ChevronDown, LogOut, Phone, ArrowRight, MessageCircle, User } from 'lucide-react'
 import Logo from './Logo'
 import Icon from './Icon'
 import { useAuth } from '../context/AuthContext'
 import { site } from '../data/site'
 import { generalCategories, generalServices } from '../data/generalServices'
 import { healthcareFinancing } from '../data/healthcareServices'
+
 
 const navItems = [
   { label: 'Home', to: '/' },
@@ -101,7 +102,7 @@ export default function Navbar() {
           <div className="hidden items-center gap-2.5 lg:flex">
             {user ? (
               <div className="flex items-center gap-3">
-                <div className="flex items-center gap-2">
+                <Link to="/signin" className="flex items-center gap-2 rounded-full p-1 transition-colors hover:bg-navy-50" title="Account Profile">
                   {user.photoURL ? (
                     <img
                       src={user.photoURL}
@@ -117,13 +118,19 @@ export default function Navbar() {
                   <span className="max-w-[8rem] truncate text-sm font-medium text-navy-800">
                     {user.displayName || user.email}
                   </span>
-                </div>
+                </Link>
                 <button onClick={signOut} className="btn-ghost px-3 py-2" aria-label="Sign out" title="Sign out">
-                  <LogOut className="h-4 w-4" />
+                  <LogOut className="h-4 w-4 text-navy-500 hover:text-red-600" />
                 </button>
               </div>
             ) : (
               <>
+                <Link
+                  to="/signin"
+                  className="flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-sm font-semibold text-navy-800 transition-colors hover:bg-navy-50 hover:text-brand-600"
+                >
+                  <User className="h-4 w-4" /> Sign In
+                </Link>
                 {/* Quick call */}
                 <a
                   href={`tel:${site.phone.replace(/\s+/g, '')}`}
@@ -291,7 +298,7 @@ function MobileMenu({ user, signOut }) {
         <div className="!mt-4 space-y-3 border-t border-navy-100 pt-4">
           {user ? (
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
+              <Link to="/signin" className="flex items-center gap-2">
                 {user.photoURL ? (
                   <img src={user.photoURL} alt="" className="h-9 w-9 rounded-full" referrerPolicy="no-referrer" />
                 ) : (
@@ -300,14 +307,17 @@ function MobileMenu({ user, signOut }) {
                   </span>
                 )}
                 <span className="text-sm font-medium text-navy-800">{user.displayName || user.email}</span>
-              </div>
+              </Link>
               <button onClick={signOut} className="btn-ghost px-3 py-2">
                 <LogOut className="h-4 w-4" />
               </button>
             </div>
           ) : (
             <div className="flex flex-col gap-2">
-              <Link to="/contact" className="btn-primary w-full">
+              <Link to="/signin" className="btn-outline w-full justify-center">
+                <User className="h-4 w-4" /> Sign In / Register
+              </Link>
+              <Link to="/contact" className="btn-primary w-full justify-center">
                 Consult Now <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
