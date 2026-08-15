@@ -46,6 +46,7 @@ export default function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/signin" element={<SignIn />} />
+              <Route path="/profile" element={<SignIn />} />
               <Route path="/privacy-policy" element={<Legal doc="privacy" />} />
               <Route path="/terms" element={<Legal doc="terms" />} />
               <Route path="/disclaimer" element={<Legal doc="disclaimer" />} />
